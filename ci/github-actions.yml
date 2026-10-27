@@ -1,0 +1,9 @@
+name: Compiler and RTL checks
+on: [push, pull_request]
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y clang iverilog
+      - run: python3 tests/regression.py

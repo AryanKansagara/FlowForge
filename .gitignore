@@ -1,0 +1,4 @@
+build/
+flowforge
+__pycache__/
+*.vcd
